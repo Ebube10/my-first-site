@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #222;
+    width: 100%;
+    height: auto;
+}
+
+.main-container {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container>.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main-container>.header>.img-Holder {
+    width: 450px;
+    height: 100%;
+}
+
+.main-container>.header>.img-Holder>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.main-container>.header>.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0 0 0 /.9); */
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+header>ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+header>ul a {
+    text-decoration: none;
+    color: lightgreen;
+}
+
+header>ul a i {
+    font-size: 1.3rem;
+}
+
+.main-container>.header>.hero>section {
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main-container>.header>.hero>section h1 {
+    color: #ffff;
+    font-size: 2.4cm;
+    font-weight: 900;
+}
+
+.main-container>.header>.hero>section h1>span#name {
+    position: relative;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, lightgreen, #fff, lightgreen, #fff);
+    background-clip: text;
+    background: -webkit-linear-gradient(to right,
+            lightgreen,
+            #fff,
+            lightgreen,
+            #fff);
+    -webkit-background-clip: text;
+    background-size: 300%;
+    animation: move 4s infinite ease alternate;
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+}
+
+.main-container>.header>.hero>section h1>span#name::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(114, 240, 114);
+    animation: blinck 2s infinite ease;
+}
+
+@keyframes blinck {
+
+    0%,
+    100% {
+        background-color: rgb(114, 240, 114);
+    }
+
+    50% {
+        background-color: #fff;
+    }
+}
+
+.main-container>.header>.hero>section p {
+    font-size: 1.3rem;
+    color: #bbb;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+button {
+    position: relative;
+    color: #ccc;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-block: 8px;
+    padding-inline: 10px;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 200ms 200ms;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: lightgreen;
+    transition: all 200ms ease-out;
+    z-index: -1;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:hover::after {
+    height: 100%;
+}
+
+hr {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-block: 3rem;
+}
+
+/* styling experinece  */
+main.experience {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main.experience .stack {
+    width: calc(100% / 3);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main.experience .stack h1 {
+    color: #eee;
+    font-size: 2rem;
+}
+
+main.experience .stack h4 {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Projects  */
+section.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+section.projects .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.projects .title h1 {
+    color: #eee;
+    font-size: 3rem;
+}
+
+section.projects main.display {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+section.projects main.display .project-d {
+    width: calc(100% / 2.07);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section.projects main.display .project-d .img-H {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+section.projects main.display .project-d .img-H img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.projects main.display .project-d h3 {
+    color: #eee;
+    font-size: 1.5rem;
+    font-family: fantasy;
+}
+
+section.projects main.display .project-d p {
+    color: #bbb;
+    font-weight: 500;
+}
+
+main.form {
+    width: 100%;
+    height: auto;
+    margin-top: 6rem;
+    background-color: #444;
+}
+
+section.formControl {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    padding-block: 4rem;
+}
+
+section.formControl .container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    margin-bottom: 4rem;
+}
+
+section.formControl .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.formControl .text h1 {
+    font-size: 2cm;
+    color: #eee;
+}
+
+section.formControl .text p {
+    color: #aaa;
+    line-height: 25px;
+}
+
+section.formControl form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.formControl form div {
+    width: 100%;
+}
+
+section.formControl form div input {
+    width: 100%;
+    padding-inline: 0.5rem;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    color: lightgreen;
+}
+
+section.formControl form div input:focus,
+section.formControl form div textarea:focus {
+    border-bottom-color: lightgreen;
+    caret-color: lightgreen;
+}
+
+section.formControl form div input:focus::placeholder,
+section.formControl form div textarea:focus::placeholder {
+    color: lightgreen;
+}
+
+section.formControl form div textarea {
+    width: 100%;
+    padding-inline: 0.5rem;
+    padding-top: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    resize: none;
+    color: lightgreen;
+}
+
+section.formControl form div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Mobile Phone View  */
+@media only screen and (max-width: 767px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .main-container>.header>.img-Holder {
+        width: 60%;
+    }
+
+    .main-container>.header>.hero {
+        background-color: rgba(0 0 0 /.5);
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        padding-top: 1rem;
+    }
+
+    .main-container>.header>.hero>section {
+        justify-content: flex-end;
+        gap: 1.5rem;
+        padding-inline: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .main-container>.header>.hero>section h1 {
+        font-size: 1.05cm;
+    }
+
+    .main-container>.header>.hero>section p {
+        font-size: 1.05rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    /* styling experinece  */
+    main.experience {
+        padding-inline: 1rem;
+    }
+
+    main.experience .stack {
+        width: calc(100% / 2);
+        height: 100px;
+    }
+
+    main.experience .stack h1 {
+        font-size: 1.4rem;
+    }
+
+    main.experience .stack h4 {
+        font-size: 1rem;
+    }
+
+    section.projects {
+        padding-inline: 1rem;
+    }
+
+    section.projects .title h1 {
+        font-size: 2rem;
+    }
+
+    section.projects main.display {
+        gap: 1.5rem;
+    }
+
+    section.projects main.display .project-d {
+        width: 100%;
+        height: 250px;
+    }
+
+    section.projects main.display .project-d .img-H {
+        height: 200px;
+    }
+
+    section.projects main.display .project-d h3 {
+        font-size: 1.3rem;
+    }
+
+    section.projects main.display .project-d p {
+        font-size: 0.8rem;
+    }
+
+    section.formControl .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    section.formControl .text h1 {
+        font-size: 1.1cm;
+    }
+
+    section.formControl .text p {
+        font-size: 0.85rem;
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .main-container>.header>.img-Holder {
+        width: 50%;
+    }
+
+    .main-container>.header>.hero {
+        background-color: rgba(0 0 0 /.4);
+    }
+
+    header {
+        padding-inline: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container>.header>.hero>section {
+        justify-content: flex-end;
+        gap: 1.5rem;
+        padding-inline: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .main-container>.header>.hero>section h1 {
+        font-size: 2cm;
+    }
+
+    .main-container>.header>.hero>section p {
+        font-size: 1.2rem;
+    }
+
+    /* Projects  */
+    section.projects {
+        padding-inline: 2rem;
+    }
+
+    section.projects main.display {
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    section.projects main.display .project-d {
+        width: calc(100% / 2.1);
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section.formControl {
+        width: 100%;
+        margin: 0;
+        padding-inline: 2rem;
+    }
+
+    section.formControl .container {
+        gap: 4rem;
+    }
+
+    section.formControl .text h1 {
+        font-size: 1.3cm;
+    }
+
+    section.formControl .text p {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+}
