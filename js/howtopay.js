@@ -12,7 +12,7 @@ function payment() {
                     plans you wish to pay for and proceed.</li>
                     <br>
 
-                    <p>You can make payments for your Xpertodds account activation/upgrade by following the below steps.</p>
+                <p>You can make payments for your Xpertodds account activation/upgrade by following the below steps.</p>
                 <h5>Account name: Xpertodds</h5>
                 <h5>Account Number: 6373701000</h5>
                 <h5>Bank: Moniepoint</h5>
@@ -47,10 +47,12 @@ function payment() {
                          <h5>Listed below are the different methods of payment available for your country:</h5>
                          <h4>Pay Via Bitcoin</h4>
                          
-            <p class="a">All payments should be made ONLY to <span>1BbByTrgiEfF15FHZAPVzN4sZoRP7deNo3</span></p>
+            <p class="a">All payments should be made ONLY to <p class="btc">1BbByTrgiEfF15FHZAPVzN4sZoRP7deNo3</p></p>
             <p class="f">After successful transaction, send us an email containing, Your Email Address, The Date of Payment, and
                 Transaction hash
-                code to <a href="mailto:xpertodds@gmail.com">xpertodds@gmail.com</a> or through WhatsApp to <a href="https://api.whatsapp.com/send/?phone=2347019436746&text&type=phone_number&app_absent=0">+234(0)701-943-6746</a></p>
+                code to <a href="mailto:xpertodds@gmail.com">xpertodds@gmail.com</a> or through <br>
+                
+                WhatsApp to <a href="https://api.whatsapp.com/send/?phone=2347019436746&text&type=phone_number&app_absent=0">+234(0)701-943-6746</a></p>
             <p class="y">Your account will be upgraded before the close of working hours.</p>
             </ul>
        
